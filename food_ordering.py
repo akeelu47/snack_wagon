@@ -159,9 +159,11 @@ def app_loop():
 
         if action_number == "3":
             display_menu()
-            sku, quantity = get_sku_and_quantity(sku, quantity)
+            sku_prompt = "Please enter the SKU number for the menu item you want to modify"
+            quantity_prompt = "Please enter the quantity you want to the change to"
+            sku, quantity = get_sku_and_quantity(sku_prompt, quantity_prompt)
             modify_cart(sku, quantity)
-
+            
         if action_number == "4":
             view_cart()
 
